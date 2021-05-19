@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import classnames from "classnames";
 import { loginUser } from "../../actions/authActions";
-
+import './Login.css'
 class Login extends Component {
   constructor() {
     super();
@@ -51,16 +51,21 @@ class Login extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="login mid container">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 m-auto">
-              <h1 className="display-4 text-center">Log In</h1>
-              <p className="lead text-center">Sign in to your account</p>
-              <form onSubmit={this.onSubmit}>
+      <div className="containercon">
+        <div className="wrapper animated bounceInLeft" style={{height:'450px'}}>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+
+          <div className="form-signup-heading">
+              <h2>Log In</h2>
+              
+              <hr/>
+              <br/>
+              <form id='form-signin' onSubmit={this.onSubmit}>
                 <div className="form-group">
+                  <label>Email Address</label>
                   <input
-                    type="email"
+                    type="email"  id="inp"
                     className={classnames("form-control form-control-lg", {
                       "is-invalid": errors.email
                     })}
@@ -74,8 +79,9 @@ class Login extends Component {
                   )}
                 </div>
                 <div className="form-group">
+                  <label>Password</label>
                   <input
-                    type="password"
+                    type="password" id="inp"
                     className={classnames("form-control form-control-lg", {
                       "is-invalid": errors.password
                     })}
@@ -88,12 +94,13 @@ class Login extends Component {
                     <div className="invalid-feedback">{errors.password}</div>
                   )}
                 </div>
-                <input type="submit" className="btn btn-info btn-block mt-4" />
+                <br/>
+                <input type="submit" id="inp" className="btn btn-info btn-block mt-4" />
               </form>
             </div>
           </div>
         </div>
-      </div>
+    
     );
   }
 }

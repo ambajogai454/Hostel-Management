@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+
+.form-group label
+{
+    font-size: 20px;
+}
+#inp
+{
+    width: 600px;
+}
+
+.wrapper{
+    box-shadow: 0 0 20px 0 rgba(72,94,116,0.7);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12px;
+  }
+  
+@media(max-width:898px){
+    #inp
+    {
+        width:550px;
+    }
+    }
+@media(max-width:845px){
+    #inp
+    {
+        width:500px;
+    }
+    }
+
+@media(max-width:770px){
+    #inp
+    {
+        width:420px;
+    }
+    }
+@media(max-width:670px){
+    #inp
+    {
+        width:300px;
+    }
+    }
+    @media(max-width:520px){
+        #inp
+        {
+            width:200px;
+        }
+        }

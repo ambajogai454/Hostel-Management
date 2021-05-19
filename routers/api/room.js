@@ -32,7 +32,7 @@ router.post('/', passport.authenticate('jwt', { session: false }), (req, res) =>
   const room = new Room(req.body)
 
   room.save()
-    .then(data => res.json({ success: true, message: 'Room has been created.' }))
+    .then(data => res.json({ success: true, message: 'Room has been allocated.' }))
     .catch(err => res.status(400).json({ ...err, message: 'Error while creating room.' }))
 })
 

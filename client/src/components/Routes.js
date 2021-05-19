@@ -12,7 +12,7 @@ import StudentDetails from './pages/StudentDetails';
 import Block from './pages/Block';
 import RoomAction from "./pages/RoomAction";
 import Staff from './pages/Staff';
-
+import Contact from './layout/Contact'
 class Routes extends Component {
     render() {
         return (
@@ -28,6 +28,8 @@ class Routes extends Component {
                     <PrivateRoute exact path="/studentdetails/:id" component={StudentDetails} />
                     <Route exact path="/register" component={Register} />
                     <Route exact path="/login" component={Login} />
+                    <Route exact path="/contact" component={Contact} />
+
                     <Redirect to="/dashboard" />
                 </Switch>
                 <Footer />
